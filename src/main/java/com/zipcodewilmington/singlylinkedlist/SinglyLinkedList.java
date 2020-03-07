@@ -77,6 +77,13 @@ public class SinglyLinkedList<D> {
             tail = startingNode;
             size++;
         }
+        else if(idx == 0)
+        {
+            Node<D> oldHead = head;
+            Node<D> startingNode = new Node<D>(value, oldHead);
+            head = startingNode;
+            size++;
+        }
         else
         {
             Node<D> currentNode = getNode(idx - 1);
@@ -124,22 +131,15 @@ public class SinglyLinkedList<D> {
 
     public Boolean contains(D value)
     {
-        if(head == null)
-        {
-            return false;
-        } else if(tail.getValue().equals(value))
-        {
-            return true;
-        }
-
         Node<D> currentNode = head;
 
-        while(currentNode.getNextNode() != null)
+        while(currentNode != null)
         {
             if(currentNode.getValue().equals(value))
             {
                 return true;
             }
+            currentNode = currentNode.getNextNode();
         }
 
         return false;
@@ -181,6 +181,7 @@ public class SinglyLinkedList<D> {
         while(currentNode != null)
         {
             copiedList.add(currentNode.getValue());
+            currentNode = currentNode.getNextNode();
         }
 
         return copiedList;
@@ -193,12 +194,41 @@ public class SinglyLinkedList<D> {
 
     public void reverse()
     {
+        SinglyLinkedList<D> reverseList = new SinglyLinkedList<D>();
+        Node<D> currentNode = head;
 
+        while(currentNode != null)
+        {
+            reverseList.add(0, currentNode.getValue());
+
+            currentNode = currentNode.getNextNode();
+        }
+
+        reverseList.tail = this.tail;
+        this.head = reverseList.getNode(0);
     }
 
     public SinglyLinkedList<D> slice(Integer startIdx, Integer endIdx)
     {
 
         return null;
+    }
+
+    @Override
+    public String toString()
+    {
+        StringBuilder result = new StringBuilder();
+
+        Node<D> currentNode = head;
+
+        result.append("{ ");
+        while(currentNode != null)
+        {
+            result.append(currentNode.getValue()).append(", ");
+            currentNode = currentNode.getNextNode();
+        }
+        result.append(" }");
+
+        return result.toString();
     }
 }

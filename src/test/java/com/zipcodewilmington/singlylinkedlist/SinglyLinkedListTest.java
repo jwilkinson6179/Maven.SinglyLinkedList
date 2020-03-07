@@ -96,12 +96,14 @@ public class SinglyLinkedListTest
     public void copyTest()
     {
         SinglyLinkedList<String> test = new SinglyLinkedList<String>();
-        test.add("Hello");
-        test.add("James");
+        test.add("A");
         SinglyLinkedList<String> copiedTest = test.copy();
         test.add("!");
 
         assertFalse(copiedTest.contains("!"));
-        assertTrue(copiedTest.contains("James"));
+        assertTrue(copiedTest.contains("A"));
     }
+
+//    @Test
+//    public void
 }
