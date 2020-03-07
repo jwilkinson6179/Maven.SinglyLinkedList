@@ -4,9 +4,6 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-/**
- * Created by leon on 1/10/18.
- */
 public class SinglyLinkedListTest
 {
     @Test
@@ -103,7 +100,4 @@ public class SinglyLinkedListTest
         assertFalse(copiedTest.contains("!"));
         assertTrue(copiedTest.contains("A"));
     }
-
-//    @Test
-//    public void
 }
