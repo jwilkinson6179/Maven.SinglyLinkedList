@@ -1,12 +1,7 @@
 package com.zipcodewilmington.singlylinkedlist;
 
-import java.util.LinkedList;
-import java.util.List;
 import java.util.StringJoiner;
 
-/**
- * Created by leon on 1/10/18.
- */
 public class SinglyLinkedList<D> {
     class Node<D>
     {

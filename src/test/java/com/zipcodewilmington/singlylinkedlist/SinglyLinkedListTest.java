@@ -4,9 +4,6 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-/**
- * Created by leon on 1/10/18.
- */
 public class SinglyLinkedListTest
 {
     @Test
@@ -113,7 +110,7 @@ public class SinglyLinkedListTest
         test.add("B");
         test.add("C");
 
-        SinglyLinkedList<String> subList = test.slice(0, 1);
+        SinglyLinkedList<String> subList = test.slice(0, 2);
         String actual = subList.toString();
 
         assertEquals(expected, actual);
