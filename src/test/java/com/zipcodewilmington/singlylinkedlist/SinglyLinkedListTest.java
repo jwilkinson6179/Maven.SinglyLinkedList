@@ -98,12 +98,41 @@ public class SinglyLinkedListTest
         SinglyLinkedList<String> test = new SinglyLinkedList<String>();
         test.add("A");
         SinglyLinkedList<String> copiedTest = test.copy();
-        test.add("!");
+        test.add("B");
 
-        assertFalse(copiedTest.contains("!"));
         assertTrue(copiedTest.contains("A"));
+        assertFalse(copiedTest.contains("B"));
     }
 
-//    @Test
-//    public void
+    @Test
+    public void sliceTest()
+    {
+        String expected = "{ A, B }";
+        SinglyLinkedList<String> test = new SinglyLinkedList<>();
+        test.add("A");
+        test.add("B");
+        test.add("C");
+
+        SinglyLinkedList<String> subList = test.slice(0, 1);
+        String actual = subList.toString();
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void sliceTestTwo()
+    {
+        String expected = "{ 3, 4 }";
+        SinglyLinkedList<Integer> test = new SinglyLinkedList<>();
+        test.add(1);
+        test.add(2);
+        test.add(3);
+        test.add(4);
+        test.add(5);
+
+        SinglyLinkedList<Integer> slicedList = test.slice(2, 4);
+        String actual = slicedList.toString();
+
+        assertEquals(expected, actual);
+    }
 }

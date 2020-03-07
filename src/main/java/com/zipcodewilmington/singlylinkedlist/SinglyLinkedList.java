@@ -2,6 +2,7 @@ package com.zipcodewilmington.singlylinkedlist;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.StringJoiner;
 
 /**
  * Created by leon on 1/10/18.
@@ -174,15 +175,7 @@ public class SinglyLinkedList<D> {
 
     public SinglyLinkedList<D> copy()
     {
-        SinglyLinkedList<D> copiedList = new SinglyLinkedList<D>();
-
-        Node<D> currentNode = head;
-
-        while(currentNode != null)
-        {
-            copiedList.add(currentNode.getValue());
-            currentNode = currentNode.getNextNode();
-        }
+        SinglyLinkedList<D> copiedList = slice(0, size);
 
         return copiedList;
     }
@@ -210,25 +203,33 @@ public class SinglyLinkedList<D> {
 
     public SinglyLinkedList<D> slice(Integer startIdx, Integer endIdx)
     {
+        SinglyLinkedList<D> subList = new SinglyLinkedList<D>();
 
-        return null;
+        Node<D> currentNode = getNode(startIdx);
+        Integer currentIdx = startIdx;
+
+        while(currentNode != null && currentIdx < endIdx)
+        {
+            subList.add(currentNode.getValue());
+            currentNode = currentNode.getNextNode();
+            currentIdx++;
+        }
+
+        return subList;
     }
 
     @Override
     public String toString()
     {
-        StringBuilder result = new StringBuilder();
+        StringJoiner result = new StringJoiner(", ");
 
         Node<D> currentNode = head;
-
-        result.append("{ ");
         while(currentNode != null)
         {
-            result.append(currentNode.getValue()).append(", ");
+            result.add(currentNode.value.toString());
             currentNode = currentNode.getNextNode();
         }
-        result.append(" }");
 
-        return result.toString();
+        return String.format("{ %s }", result);
     }
 }
