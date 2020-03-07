@@ -41,7 +41,7 @@ public class SinglyLinkedListTest
     }
 
     @Test
-    public void itsATest()
+    public void itsARemoveTest()
     {
         Integer expected = 0;
         SinglyLinkedList<Integer> test = new SinglyLinkedList<Integer>();
@@ -90,6 +90,21 @@ public class SinglyLinkedListTest
     }
 
     @Test
+    public void getTest()
+    {
+        String expected = "LOOKING";
+        SinglyLinkedList<String> test = new SinglyLinkedList<>();
+        test.add("The");
+        test.add("Term");
+        test.add("I'm");
+        test.add(expected);
+        test.add("For");
+        String actual = test.get(3);
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
     public void copyTest()
     {
         SinglyLinkedList<String> test = new SinglyLinkedList<String>();
@@ -132,4 +147,21 @@ public class SinglyLinkedListTest
 
         assertEquals(expected, actual);
     }
+
+    @Test
+    public void reverseTest()
+    {
+        String expected = "{ 5, 4, 3, 2, 1 }";
+        SinglyLinkedList<Integer> test = new SinglyLinkedList<>();
+        test.add(1);
+        test.add(2);
+        test.add(3);
+        test.add(4);
+        test.add(5);
+        test.reverse();
+        String actual = test.toString();
+
+        assertEquals(expected, actual);
+    }
+
 }

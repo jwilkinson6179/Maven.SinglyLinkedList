@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4f0c6f35-1ac5-49ea-b41e-20445c07c5c6" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zipcodewilmington/singlylinkedlist/SinglyLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zipcodewilmington/singlylinkedlist/SinglyLinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/zipcodewilmington/singlylinkedlist/SinglyLinkedListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/zipcodewilmington/singlylinkedlist/SinglyLinkedListTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,6 +12,9 @@
   </component>
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="176" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -140,7 +143,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SinglyLinkedListTest.addTwoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SinglyLinkedListTest.getTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="singlylinkedlist" />
       <extension name="coverage">
         <pattern>
@@ -150,14 +153,14 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.zipcodewilmington.singlylinkedlist" />
       <option name="MAIN_CLASS_NAME" value="com.zipcodewilmington.singlylinkedlist.SinglyLinkedListTest" />
-      <option name="METHOD_NAME" value="addTwoTest" />
+      <option name="METHOD_NAME" value="getTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SinglyLinkedListTest.copyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SinglyLinkedListTest.reverseTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="singlylinkedlist" />
       <extension name="coverage">
         <pattern>
@@ -167,7 +170,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.zipcodewilmington.singlylinkedlist" />
       <option name="MAIN_CLASS_NAME" value="com.zipcodewilmington.singlylinkedlist.SinglyLinkedListTest" />
-      <option name="METHOD_NAME" value="copyTest" />
+      <option name="METHOD_NAME" value="reverseTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
@@ -270,10 +273,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.SinglyLinkedListTest" />
+        <item itemvalue="JUnit.SinglyLinkedListTest.getTest" />
+        <item itemvalue="JUnit.SinglyLinkedListTest.reverseTest" />
         <item itemvalue="JUnit.SinglyLinkedListTest.sliceTest" />
         <item itemvalue="JUnit.SinglyLinkedListTest.sliceTestTwo" />
-        <item itemvalue="JUnit.SinglyLinkedListTest.copyTest" />
-        <item itemvalue="JUnit.SinglyLinkedListTest.addTwoTest" />
       </list>
     </recent_temporary>
   </component>
@@ -299,6 +302,7 @@
       <workItem from="1583562940066" duration="1604000" />
       <workItem from="1583591736705" duration="72000" />
       <workItem from="1583591812833" duration="2727000" />
+      <workItem from="1583595115871" duration="469000" />
     </task>
     <servers />
   </component>
@@ -315,58 +319,58 @@
     </state>
     <state x="480" y="-788" key="#com.intellij.ide.util.MemberChooser/0.23.1280.728/-293.-1057.1920.1057@-293.-1057.1920.1057" timestamp="1583547773682" />
     <state x="515" y="184" key="#com.intellij.ide.util.MemberChooser/0.23.1280.728@0.23.1280.728" timestamp="1583594294170" />
-    <state width="1238" height="180" key="GridCell.Tab.0.bottom" timestamp="1583594954628">
+    <state width="1238" height="180" key="GridCell.Tab.0.bottom" timestamp="1583595603185">
       <screen x="0" y="23" width="1280" height="728" />
     </state>
     <state width="1878" height="304" key="GridCell.Tab.0.bottom/0.0.1280.800/-293.-1080.1920.1080@-293.-1080.1920.1080" timestamp="1583542917542" />
     <state width="1878" height="337" key="GridCell.Tab.0.bottom/0.23.1280.728/-293.-1057.1920.1057@-293.-1057.1920.1057" timestamp="1583549139146" />
-    <state width="1238" height="180" key="GridCell.Tab.0.bottom/0.23.1280.728@0.23.1280.728" timestamp="1583594954628" />
+    <state width="1238" height="180" key="GridCell.Tab.0.bottom/0.23.1280.728@0.23.1280.728" timestamp="1583595603185" />
     <state width="1878" height="304" key="GridCell.Tab.0.bottom/0.23.1280.777/-293.-1080.1920.1080@-293.-1080.1920.1080" timestamp="1583520176083" />
-    <state width="1238" height="180" key="GridCell.Tab.0.center" timestamp="1583594954627">
+    <state width="1238" height="180" key="GridCell.Tab.0.center" timestamp="1583595603183">
       <screen x="0" y="23" width="1280" height="728" />
     </state>
     <state width="1878" height="304" key="GridCell.Tab.0.center/0.0.1280.800/-293.-1080.1920.1080@-293.-1080.1920.1080" timestamp="1583542917539" />
     <state width="1878" height="337" key="GridCell.Tab.0.center/0.23.1280.728/-293.-1057.1920.1057@-293.-1057.1920.1057" timestamp="1583549139145" />
-    <state width="1238" height="180" key="GridCell.Tab.0.center/0.23.1280.728@0.23.1280.728" timestamp="1583594954627" />
+    <state width="1238" height="180" key="GridCell.Tab.0.center/0.23.1280.728@0.23.1280.728" timestamp="1583595603183" />
     <state width="1878" height="304" key="GridCell.Tab.0.center/0.23.1280.777/-293.-1080.1920.1080@-293.-1080.1920.1080" timestamp="1583520176080" />
-    <state width="1238" height="180" key="GridCell.Tab.0.left" timestamp="1583594954626">
+    <state width="1238" height="180" key="GridCell.Tab.0.left" timestamp="1583595603177">
       <screen x="0" y="23" width="1280" height="728" />
     </state>
     <state width="1878" height="304" key="GridCell.Tab.0.left/0.0.1280.800/-293.-1080.1920.1080@-293.-1080.1920.1080" timestamp="1583542917538" />
     <state width="1878" height="337" key="GridCell.Tab.0.left/0.23.1280.728/-293.-1057.1920.1057@-293.-1057.1920.1057" timestamp="1583549139144" />
-    <state width="1238" height="180" key="GridCell.Tab.0.left/0.23.1280.728@0.23.1280.728" timestamp="1583594954626" />
+    <state width="1238" height="180" key="GridCell.Tab.0.left/0.23.1280.728@0.23.1280.728" timestamp="1583595603177" />
     <state width="1878" height="304" key="GridCell.Tab.0.left/0.23.1280.777/-293.-1080.1920.1080@-293.-1080.1920.1080" timestamp="1583520176078" />
-    <state width="1238" height="180" key="GridCell.Tab.0.right" timestamp="1583594954627">
+    <state width="1238" height="180" key="GridCell.Tab.0.right" timestamp="1583595603184">
       <screen x="0" y="23" width="1280" height="728" />
     </state>
     <state width="1878" height="304" key="GridCell.Tab.0.right/0.0.1280.800/-293.-1080.1920.1080@-293.-1080.1920.1080" timestamp="1583542917541" />
     <state width="1878" height="337" key="GridCell.Tab.0.right/0.23.1280.728/-293.-1057.1920.1057@-293.-1057.1920.1057" timestamp="1583549139145" />
-    <state width="1238" height="180" key="GridCell.Tab.0.right/0.23.1280.728@0.23.1280.728" timestamp="1583594954627" />
+    <state width="1238" height="180" key="GridCell.Tab.0.right/0.23.1280.728@0.23.1280.728" timestamp="1583595603184" />
     <state width="1878" height="304" key="GridCell.Tab.0.right/0.23.1280.777/-293.-1080.1920.1080@-293.-1080.1920.1080" timestamp="1583520176081" />
-    <state width="1238" height="225" key="GridCell.Tab.1.bottom" timestamp="1583591211267">
+    <state width="1238" height="225" key="GridCell.Tab.1.bottom" timestamp="1583595591894">
       <screen x="0" y="23" width="1280" height="728" />
     </state>
     <state width="1878" height="375" key="GridCell.Tab.1.bottom/0.0.1280.800/-293.-1080.1920.1080@-293.-1080.1920.1080" timestamp="1583542150173" />
     <state width="1878" height="337" key="GridCell.Tab.1.bottom/0.23.1280.728/-293.-1057.1920.1057@-293.-1057.1920.1057" timestamp="1583549139147" />
-    <state width="1238" height="225" key="GridCell.Tab.1.bottom/0.23.1280.728@0.23.1280.728" timestamp="1583591211267" />
-    <state width="1238" height="225" key="GridCell.Tab.1.center" timestamp="1583591211266">
+    <state width="1238" height="225" key="GridCell.Tab.1.bottom/0.23.1280.728@0.23.1280.728" timestamp="1583595591894" />
+    <state width="1238" height="225" key="GridCell.Tab.1.center" timestamp="1583595591894">
       <screen x="0" y="23" width="1280" height="728" />
     </state>
     <state width="1878" height="375" key="GridCell.Tab.1.center/0.0.1280.800/-293.-1080.1920.1080@-293.-1080.1920.1080" timestamp="1583542150171" />
     <state width="1878" height="337" key="GridCell.Tab.1.center/0.23.1280.728/-293.-1057.1920.1057@-293.-1057.1920.1057" timestamp="1583549139147" />
-    <state width="1238" height="225" key="GridCell.Tab.1.center/0.23.1280.728@0.23.1280.728" timestamp="1583591211266" />
-    <state width="1238" height="225" key="GridCell.Tab.1.left" timestamp="1583591211266">
+    <state width="1238" height="225" key="GridCell.Tab.1.center/0.23.1280.728@0.23.1280.728" timestamp="1583595591894" />
+    <state width="1238" height="225" key="GridCell.Tab.1.left" timestamp="1583595591894">
       <screen x="0" y="23" width="1280" height="728" />
     </state>
     <state width="1878" height="375" key="GridCell.Tab.1.left/0.0.1280.800/-293.-1080.1920.1080@-293.-1080.1920.1080" timestamp="1583542150170" />
     <state width="1878" height="337" key="GridCell.Tab.1.left/0.23.1280.728/-293.-1057.1920.1057@-293.-1057.1920.1057" timestamp="1583549139146" />
-    <state width="1238" height="225" key="GridCell.Tab.1.left/0.23.1280.728@0.23.1280.728" timestamp="1583591211266" />
-    <state width="1238" height="225" key="GridCell.Tab.1.right" timestamp="1583591211266">
+    <state width="1238" height="225" key="GridCell.Tab.1.left/0.23.1280.728@0.23.1280.728" timestamp="1583595591894" />
+    <state width="1238" height="225" key="GridCell.Tab.1.right" timestamp="1583595591894">
       <screen x="0" y="23" width="1280" height="728" />
     </state>
     <state width="1878" height="375" key="GridCell.Tab.1.right/0.0.1280.800/-293.-1080.1920.1080@-293.-1080.1920.1080" timestamp="1583542150172" />
     <state width="1878" height="337" key="GridCell.Tab.1.right/0.23.1280.728/-293.-1057.1920.1057@-293.-1057.1920.1057" timestamp="1583549139147" />
-    <state width="1238" height="225" key="GridCell.Tab.1.right/0.23.1280.728@0.23.1280.728" timestamp="1583591211266" />
+    <state width="1238" height="225" key="GridCell.Tab.1.right/0.23.1280.728@0.23.1280.728" timestamp="1583595591894" />
     <state x="155" y="-959" key="SettingsEditor" timestamp="1583519525347">
       <screen x="-293" y="-1080" width="1920" height="1080" />
     </state>
@@ -379,6 +383,9 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/singlylinkedlist$com_zipcodewilmington_singlylinkedlist_in_singlylinkedlist.ic" NAME="com.zipcodewilmington.singlylinkedlist in singlylinkedlist Coverage Results" MODIFIED="1583542342077" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.zipcodewilmington.singlylinkedlist.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/singlylinkedlist$SinglyLinkedListTest.ic" NAME="SinglyLinkedListTest Coverage Results" MODIFIED="1583595603129" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.zipcodewilmington.singlylinkedlist.*</FILTER>
     </SUITE>
   </component>
