@@ -2,8 +2,8 @@ package com.zipcodewilmington.singlylinkedlist;
 
 import java.util.StringJoiner;
 
-public class SinglyLinkedList<D> {
-    class Node<D>
+public class SinglyLinkedList<D extends Comparable<D>> {
+    class Node<D extends Comparable<D>>
     {
         private D value;
         private Node<D> nextNode;
@@ -32,6 +32,10 @@ public class SinglyLinkedList<D> {
         public void setValue(D updatedValue)
         {
             value = updatedValue;
+        }
+
+        public int compareTo(Node<D> o) {
+            return this.value.compareTo(o.getValue());
         }
     }
 
@@ -175,10 +179,23 @@ public class SinglyLinkedList<D> {
         return copiedList;
     }
 
-    public void sort()
-    {
-
-    }
+//    public void sort()
+//    {
+//        for(Integer i = 0; i < size; i++)
+//        {
+//            Node<D> currentNode = head;
+//            for(Integer k = 0; k < size - i - 1; k++)
+//            {
+//                // if k > k+1, swap k and k+1
+//                // if k was head, k+1 is now head
+//                // if k+1 was tail, k is now tail
+//                if(
+//                {
+//                    currentNode.getValue()
+//                }
+//            }
+//        }
+//    }
 
     public void reverse()
     {
