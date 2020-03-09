@@ -14,6 +14,11 @@ public class SinglyLinkedList<D extends Comparable<D>> {
             this.nextNode = initNextNode;
         }
 
+        public Node()
+        {
+            this(null, null);
+        }
+
         public Node<D> getNextNode()
         {
             return nextNode;
@@ -46,14 +51,14 @@ public class SinglyLinkedList<D extends Comparable<D>> {
     public SinglyLinkedList()
     {
         size = 0;
-        head = null;
-        tail = null;
+        head = new Node<>();
+        tail = head;
     }
 
     private Node<D> getNode(Integer idx)
     {
         Integer currentIdx = 0;
-        Node<D> currentNode = head;
+        Node<D> currentNode = head.getNextNode();
 
         while(currentIdx < idx)
         {
@@ -70,36 +75,30 @@ public class SinglyLinkedList<D extends Comparable<D>> {
         {
             throw new IndexOutOfBoundsException();
         }
-        else if(head == null)
+
+        Node<D> addedNode;
+        if(idx.equals(size)) // Add to the end
         {
-            Node<D> startingNode = new Node<D>(value, null);
-            head = startingNode;
-            tail = startingNode;
+            addedNode = new Node<>(value, null);
+            head.setNextNode(addedNode);
+            tail = addedNode;
             size++;
         }
-        else if(idx == 0)
+        else // Add to end
         {
-            Node<D> oldHead = head;
-            Node<D> startingNode = new Node<D>(value, oldHead);
-            head = startingNode;
+            Node<D> existingNode = head.getNextNode();
+            addedNode = new Node<>(value, existingNode);
+            head.setNextNode(addedNode);
             size++;
-        }
-        else
-        {
-            Node<D> currentNode = getNode(idx - 1);
-            Node<D> oldNextNode = currentNode.getNextNode();
-            currentNode.setNextNode(new Node<D>(value, oldNextNode));
-            size++;
-            if(tail.equals(currentNode))
-            {
-                tail = currentNode.getNextNode();
-            }
         }
     }
 
     public void add(D value)
     {
-        add(size, value);
+        Node<D> addedNode = new Node<>(value, null);
+        tail.setNextNode(addedNode);
+        tail = addedNode;
+        size++;
     }
 
     public void remove(Integer idx)
@@ -108,12 +107,13 @@ public class SinglyLinkedList<D extends Comparable<D>> {
         {
             throw new IndexOutOfBoundsException();
         }
-        else if(size == 1)
+        else if(size.equals(1))
         {
-            head = null;
-            tail = null;
+            head.setNextNode(null);
+            tail = head;
             size--;
-        } else if(idx == size - 1)
+        }
+        else if(idx == (size - 1))
         {
             Node<D> currentNode = getNode(idx - 1);
             currentNode.setNextNode(null);
@@ -131,7 +131,7 @@ public class SinglyLinkedList<D extends Comparable<D>> {
 
     public Boolean contains(D value)
     {
-        Node<D> currentNode = head;
+        Node<D> currentNode = head.getNextNode();
 
         while(currentNode != null)
         {
@@ -148,7 +148,7 @@ public class SinglyLinkedList<D extends Comparable<D>> {
     public Integer find(D value)
     {
         Integer currentLocation = 0;
-        Node<D> currentNode = head;
+        Node<D> currentNode = head.getNextNode();
 
         while(currentNode != null)
         {
@@ -179,28 +179,30 @@ public class SinglyLinkedList<D extends Comparable<D>> {
         return copiedList;
     }
 
-//    public void sort()
-//    {
-//        for(Integer i = 0; i < size; i++)
-//        {
-//            Node<D> currentNode = head;
-//            for(Integer k = 0; k < size - i - 1; k++)
-//            {
-//                // if k > k+1, swap k and k+1
-//                // if k was head, k+1 is now head
-//                // if k+1 was tail, k is now tail
-//                if(
-//                {
-//                    currentNode.getValue()
-//                }
-//            }
-//        }
-//    }
+    public void sort()
+    {
+        for(Integer i = 0; i < size - 1; i++)
+        {
+            Node<D> cursor = head;
+            for(Integer k = 0; k < size - i - 1; k++)
+            {
+                Node<D> current = cursor.getNextNode();
+                Node<D> next = current.getNextNode();
+                if(current.getValue().compareTo(next.getValue()) > 0)
+                {
+                    current.setNextNode(next.getNextNode());
+                    next.setNextNode(current);
+                    cursor.setNextNode(next);
+                }
+                cursor = cursor.getNextNode();
+            }
+        }
+    }
 
     public void reverse()
     {
         SinglyLinkedList<D> reverseList = new SinglyLinkedList<D>();
-        Node<D> currentNode = head;
+        Node<D> currentNode = head.getNextNode();
 
         while(currentNode != null)
         {
@@ -210,7 +212,7 @@ public class SinglyLinkedList<D extends Comparable<D>> {
         }
 
         reverseList.tail = this.tail;
-        this.head = reverseList.getNode(0);
+        this.head.setNextNode(reverseList.getNode(0));
     }
 
     public SinglyLinkedList<D> slice(Integer startIdx, Integer endIdx)
@@ -233,15 +235,15 @@ public class SinglyLinkedList<D extends Comparable<D>> {
     @Override
     public String toString()
     {
-        StringJoiner result = new StringJoiner(", ");
+        StringJoiner result = new StringJoiner(", ", "{ ", " }");
 
-        Node<D> currentNode = head;
+        Node<D> currentNode = head.getNextNode();
         while(currentNode != null)
         {
             result.add(currentNode.value.toString());
             currentNode = currentNode.getNextNode();
         }
 
-        return String.format("{ %s }", result);
+        return result.toString();
     }
 }

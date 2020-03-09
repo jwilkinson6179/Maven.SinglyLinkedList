@@ -164,4 +164,34 @@ public class SinglyLinkedListTest
         assertEquals(expected, actual);
     }
 
+    @Test
+    public void sortTestAlreadySorted()
+    {
+        String expected = "{ 1, 2, 3 }";
+        SinglyLinkedList<Integer> test = new SinglyLinkedList<>();
+        test.add(1);
+        test.add(2);
+        test.add(3);
+        test.sort();
+        String actual = test.toString();
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void sortTest()
+    {
+        String expected = "{ 1, 2, 3, 4, 5, 6 }";
+        SinglyLinkedList<Integer> test = new SinglyLinkedList<>();
+        test.add(4);
+        test.add(6);
+        test.add(5);
+        test.add(3);
+        test.add(2);
+        test.add(1);
+        test.sort();
+        String actual = test.toString();
+
+        assertEquals(expected, actual);
+    }
 }
